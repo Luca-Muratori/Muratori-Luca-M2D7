@@ -28,7 +28,7 @@
         }
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
-        body>div>div.jumbotron.p-4.p-md-5.text-white.rounded>div>p.lead.mb-0>a {
+        body>div>div.jumbotron>div>p>a {
             font-size: 100px
         }
 
@@ -42,12 +42,31 @@
             font-size: 60px;
         }
 
-        /*  EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
+        /*  EX6) Write a selector to target the last blog post*/
+        body>main>div>div>div:nth-child(4) {
+            background-color: sienna
+        }
+
+        /*    EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
+        body>main>div>aside>div:nth-child(2)>ol {
+            font-size: 20px;
+        }
+
+        /*    EX8) Write a selector to target the second post author*/
+        body>main>div>div>div:nth-child(3) {
+            background-color: steelblue;
+        }
+
+        /*    EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly*/
+        body>footer>p:nth-child(2)>a {
+            font-size: 20px
+        }
+
+        /*    EX10) Write a selector to target the footer
         */
+        body>footer {
+            background-color: teal;
+        }
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -442,7 +461,7 @@
 
         }
         console.log(removeLinks())
-        /*  EX15) Write a function to change the column size for heading in jumbotron*/
+
 
         /*  EX16) Write a function to remove the "Search" magnifying glass icon*/
         const removeSearchIcon = function () {
@@ -451,8 +470,16 @@
         }
         console.log(removeSearchIcon())
         /*  EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post*/
+        const trimParagraph = function () {
+            let para = document.querySelectorAll("body > main > div > div > div > p:nth-child(3)")
+            for (let i = 0; i <= para.length; i++) {
+                para[i].innerHTML = para[i].innerHTML.substring(0, 75) + "..."
 
-        /*  EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+
+            }
+        }
+        console.log(trimParagraph())
+        /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
