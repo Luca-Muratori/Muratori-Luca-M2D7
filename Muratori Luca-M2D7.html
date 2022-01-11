@@ -28,10 +28,21 @@
         }
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
+        body>div>div.jumbotron.p-4.p-md-5.text-white.rounded.bg-dark>div>p.lead.mb-0>a {
+            font-size: 100px
+        }
 
-        /*  EX4) Write a selector to target the first blogpost
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
+        /*  EX4) Write a selector to target the first blogpost*/
+        body>main>div>div>div:nth-child(2) {
+            color: saddlebrown
+        }
+
+        /*   EX5) Write a selector to target the "even" links in the navbar*/
+        body>div>div.nav-scroller.py-1.mb-2>nav>a:nth-child(even) {
+            font-size: 60px;
+        }
+
+        /*    EX6) Write a selector to target the last blog post
             EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
             EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
