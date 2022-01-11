@@ -42,7 +42,7 @@
             font-size: 60px;
         }
 
-        /*    EX6) Write a selector to target the last blog post
+        /*  EX6) Write a selector to target the last blog post
             EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
             EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
@@ -413,11 +413,38 @@
     <script>
         /*
           JS Exercises
-          EX11) Write a function to add a new link into the navbar
-          EX12) Write a function to change the color of the main title
-          EX13) Write a function to change the background of the jumbotron
-          EX14) Write a function to remove all the links under "Elsewhere"
-          EX15) Write a function to change the column size for heading in jumbotron
+          EX11) Write a function to add a new link into the navbar*/
+        const addLinkNav = function () {
+            let newA = document.createElement('a')
+            let textNewA = document.createTextNode('Where to sleep')
+            newA.appendChild(textNewA)
+            let element = document.querySelector('nav')
+            element.appendChild(newA)
+
+        }
+        console.log(addLinkNav())
+        /*  EX12) Write a function to change the color of the main title*/
+        const newColorMainTitle = function () {
+            let element = document.querySelector("body > main > div > div > h3").style.color = "blue"
+            return element
+        }
+        console.log(newColorMainTitle())
+        /*  EX13) Write a function to change the background of the jumbotron*/
+        const changeJumbotronBackground = function () {
+            let jumbo = document.querySelector("body > div > div.jumbotron.p-4.p-md-5.text-white.rounded.bg-dark")
+            jumbo.classList.remove("bg-dark")
+            jumbo.style.backgroundColor = 'blue'
+            return jumbo
+        }
+        console.log(changeJumbotronBackground())
+        /*  EX14) Write a function to remove all the links under "Elsewhere"*/
+        const removeLinks = function () {
+            let elsewhereLinks = document.querySelector("body > main > div > aside > div:nth-child(3) > ol")
+            elsewhereLinks.parentElement.removeChild(elsewhereLinks)
+            return elsewhereLinks
+        }
+        console.log(removeLinks())
+        /*  EX15) Write a function to change the column size for heading in jumbotron
           EX16) Write a function to remove the "Search" magnifying glass icon
           EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
           EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
