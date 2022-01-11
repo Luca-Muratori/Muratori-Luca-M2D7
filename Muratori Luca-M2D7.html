@@ -28,7 +28,7 @@
         }
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
-        body>div>div.jumbotron.p-4.p-md-5.text-white.rounded.bg-dark>div>p.lead.mb-0>a {
+        body>div>div.jumbotron.p-4.p-md-5.text-white.rounded>div>p.lead.mb-0>a {
             font-size: 100px
         }
 
@@ -451,10 +451,7 @@
         }
         console.log(removeSearchIcon())
         /*  EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post*/
-        const trim50Character = function () {
-            let firstParagraph = document.querySelector("body > main > div > div > div:nth-child(2) > p:nth-child(3)")
-        }
-        console.log(trim50Character())
+
         /*  EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
