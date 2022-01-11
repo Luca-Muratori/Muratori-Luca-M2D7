@@ -420,13 +420,12 @@
             newA.appendChild(textNewA)
             let element = document.querySelector('nav')
             element.appendChild(newA)
-
         }
         console.log(addLinkNav())
         /*  EX12) Write a function to change the color of the main title*/
         const newColorMainTitle = function () {
             let element = document.querySelector("body > main > div > div > h3").style.color = "blue"
-            return element
+
         }
         console.log(newColorMainTitle())
         /*  EX13) Write a function to change the background of the jumbotron*/
@@ -434,20 +433,29 @@
             let jumbo = document.querySelector("body > div > div.jumbotron.p-4.p-md-5.text-white.rounded.bg-dark")
             jumbo.classList.remove("bg-dark")
             jumbo.style.backgroundColor = 'blue'
-            return jumbo
         }
         console.log(changeJumbotronBackground())
         /*  EX14) Write a function to remove all the links under "Elsewhere"*/
         const removeLinks = function () {
             let elsewhereLinks = document.querySelector("body > main > div > aside > div:nth-child(3) > ol")
             elsewhereLinks.parentElement.removeChild(elsewhereLinks)
-            return elsewhereLinks
+
         }
         console.log(removeLinks())
-        /*  EX15) Write a function to change the column size for heading in jumbotron
-          EX16) Write a function to remove the "Search" magnifying glass icon
-          EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-          EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+        /*  EX15) Write a function to change the column size for heading in jumbotron*/
+
+        /*  EX16) Write a function to remove the "Search" magnifying glass icon*/
+        const removeSearchIcon = function () {
+            let searchIcon = document.querySelector("body > div > header > div > div.col-4.d-flex.justify-content-end.align-items-center > a.text-muted > svg")
+            searchIcon.parentElement.removeChild(searchIcon)
+        }
+        console.log(removeSearchIcon())
+        /*  EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post*/
+        const trim50Character = function () {
+            let firstParagraph = document.querySelector("body > main > div > div > div:nth-child(2) > p:nth-child(3)")
+        }
+        console.log(trim50Character())
+        /*  EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
